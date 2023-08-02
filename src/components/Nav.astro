@@ -1,0 +1,36 @@
+---
+// library import
+import { Icon } from "astro-icon";
+
+// component import
+import Link from "./Link.astro";
+
+// data import
+import navData from "../data/navData";
+import { isRenderTemplateResult } from "astro/dist/runtime/server/render/astro";
+---
+
+<nav aria-label="Primary">
+  <div class="navbar">
+    <a href="/" class="logomark" aria-label="Go Home">
+      <Icon name="logomark" width="60" />
+    </a>
+    <ul>
+      {
+        navData.map((item) => (
+          <Link
+            text={item.name}
+            href={item.path}
+            style="primary"
+            isFilled={false}
+            data-navLink
+          />
+        ))
+      }
+    </ul>
+  </div>
+</nav>
+
+<script>
+  import "../js/nav.js";
+</script>
