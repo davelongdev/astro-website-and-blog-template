@@ -1,14 +1,9 @@
 ---
-// library imports
-import { Image } from "@astrojs/image/components";
 
 // component imports
 import PostHeader from "../components/PostHeader.astro";
+import CategoryCloud from "../components/CategoryCloud.astro";
 import MainLayout from "./MainLayout.astro";
-
-// utils imports
-
-import { slugify, formatDate } from "../js/utils";
 
 const { frontmatter } = Astro.props;
 
@@ -21,6 +16,11 @@ const { title, description, date, category, author, image } = frontmatter;
     <div class="content">
       <slot />
     </div>
-    <div class="sidebar"></div>
+    <div class="sidebar">
+      <aside class="container" aria-label="Blog categories">
+        <h2 class="h3">Blog Categories</h2>
+        <CategoryCloud />
+      </aside>
+    </div>
   </div>
 </MainLayout>
