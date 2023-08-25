@@ -6,4 +6,4 @@ https://www.youtube.com/playlist?list=PLoqZcxvpWzzeRwF8TEpXHtO7KYY6cNJeF
 
 deployed to vercel here - 
 
-[live site](astro-blog-2.vercel.app)
+[live site](https://astro-blog-2.vercel.app)
