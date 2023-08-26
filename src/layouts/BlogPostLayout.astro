@@ -33,20 +33,27 @@ const relatedPosts = formattedPosts
   {frontmatter}
   robots={frontmatter.robots}
 >
-  <PostHeader {title} {description} {date} {category} {image} {author} />
-  <div class="post-content">
-    <div class="content">
+  <PostHeader
+    {title}
+    {description}
+    {date}
+    {category}
+    {image}
+    {author}
+  />
+  <div>
+    <div>
       <slot />
     </div>
-    <div class="sidebar">
-      <aside class="container" aria-label="Blog categories">
-        <h2 class="h3">Blog Categories</h2>
+    <div>
+      <aside>
+        <h2>Blog Categories</h2>
         <CategoryCloud />
       </aside>
       {
         relatedPosts.length > 0 && (
-          <aside class="container" aria-label="Blog categories">
-            <h2 class="h3">Related Posts</h2>
+          <aside>
+            <h2>Related Posts</h2>
             <RelatedPosts {relatedPosts} />
           </aside>
         )
