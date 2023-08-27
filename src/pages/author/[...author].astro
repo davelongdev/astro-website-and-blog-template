@@ -25,15 +25,14 @@ export async function getStaticPaths() {
   })
 }
 
-const { author } = Astro.params;
 const { posts, authorName } = Astro.props;
 
 ---
 
 <MainLayout title={authorName}>
-  <section class="container" aria-label={`Posts by ${authorName}`}>
-    <h1 class="h1">Posts by <span>{authorName}</span></h1>
-    <div class="post-container">
+  <section>
+    <h1>Posts by {authorName}</h1>
+    <div>
       {
         posts.map((post) => (
           <PostCard
