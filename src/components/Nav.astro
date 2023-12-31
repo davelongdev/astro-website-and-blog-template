@@ -9,8 +9,8 @@ import Link from "./Link.astro";
 import navData from "../data/navData";
 ---
 
-<nav aria-label="Primary">
-  <div>
+<nav>
+  <div class="flex justify-between">
     <a href="/">
       <Icon name="home" width="60" />
     </a>
@@ -21,13 +21,15 @@ import navData from "../data/navData";
             text={item.name}
             href={item.path}
             style="primary"
-            isFilled={false}
+            isFilled={true}
             data-navLink
+            border-visible={true}
           />
         ))
       }
     </ul>
   </div>
+  <hr class="mb-2">
 </nav>
 
 <script>
