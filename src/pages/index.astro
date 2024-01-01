@@ -13,9 +13,9 @@ const formattedPosts = formatBlogPosts(allPosts, {
 });
 ---
 
-<MainLayout title="My Web Site & Blog" description="A sample website made with Astro and styled with Tailwind CSS">
+<MainLayout title="Web Site & Blog" description="A sample website made with Astro and styled with Tailwind CSS">
   <section>
-    <h1 class="text-center text-3xl py-3">My Website and Blog</h1>
+    <h1 class="text-center text-3xl py-3">Website and Blog</h1>
     <div class="flex justify-center pb-5">
       <img
         class="object-center"
@@ -34,7 +34,7 @@ const formattedPosts = formatBlogPosts(allPosts, {
   </section>
   <hr />
   <section>
-    <h2 class="text-3xl py-3 m-3">New Blog Posts</h2>
+    <h2 class="text-3xl py-3 m-3 border-box">New Blog Posts</h2>
     <div>
       {
         formattedPosts.map((post) => (
