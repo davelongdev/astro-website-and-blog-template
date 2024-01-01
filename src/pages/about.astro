@@ -7,29 +7,29 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Link from "../components/Link.astro";
 ---
 
-<MainLayout title="About" description="My About Page">
-  <section>
+<MainLayout title="About" description="About Page">
+  <section class="flex flex-col justify-start">
     <Image
       src="/images/silhouette.svg"
-      alt="My Headshot"
+      alt="Headshot"
       width={200}
       height={330}
       format="avif"
     />
     <div>
-      <h1>My Blog</h1>
-      <p>
+      <h1 class="text-center text-3xl py-3">About</h1>
+      <p class="text-xl px-10 pb-5">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea cupiditate
         maiores assumenda est, facilis, doloremque eius consequatur illum iusto
         a officiis esse velit veniam expedita labore itaque sit facere
         reprehenderit? Vitae repudiandae quod est? Nemo quia cupiditate atque
         totam deleniti.
       </p>
-      <Link
+      <a
+        class="py-1.5 px-2 m-10 border rounded-md bg-slate-400"
         href="mailto:davelongdev@gmail.com"
         style="primary"
-        text="Contact Me"
-      />
+      >Contact Me<a />
     </div>
   </section>
 </MainLayout>

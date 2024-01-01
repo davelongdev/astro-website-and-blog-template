@@ -15,12 +15,11 @@ const Tag = tagType;
 const { title, date, author, image, description, category } = frontmatter;
 ---
 
-<article>
-  <div>
-    <a href={`/category/${slugify(category)}`}>{category}</a>
-  </div>
-  <a href={url}>
+<article class="border-2 rounded-md p-5 m-6 bg-slate-400">
+    <a class="py-1.5 px-2 border rounded-md" href={`/category/${slugify(category)}`}>{category}</a>
+  <a class="" href={url}>
     <Image
+      class="my-4 rounded-md"
       src={image.src}
       alt={image.alt}
       width={400}
@@ -34,15 +33,16 @@ const { title, date, author, image, description, category } = frontmatter;
   <div>
     <div>
       <Tag class="h3">
-        <a href={url}>{title}</a>
+        <a class="text-lg font-medium" href={url}>{title}</a>
       </Tag>
+      <hr / class="my-2">
       <div>
         by <a href={`/author/${slugify(author)}`}>{author}</a> • {
           formatDate(date)
         }
       </div>
     </div>
-    <p>{description}</p>
-    <Link href={url} text="Read Post" style="secondary" />
+      <p class="py-2 mb-3" >{description}</p>
+      <a class="py-1.5 px-2 border rounded-md m-30" href={url}>Read Post<a/>
   </div>
 </article>

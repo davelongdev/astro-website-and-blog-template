@@ -17,14 +17,7 @@ import navData from "../data/navData";
     <ul>
       {
         navData.map((item) => (
-          <Link
-            text={item.name}
-            href={item.path}
-            style="primary"
-            isFilled={true}
-            data-navLink
-            border-visible={true}
-          />
+          <a class="underline text-xl text-blue-600 hover:text-blue-800 visited:text-purple-600 px-3" href={item.path}>{item.name}</a>
         ))
       }
     </ul>

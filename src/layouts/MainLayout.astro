@@ -18,9 +18,9 @@ const {
 
 <html lang="en">
   <MainHead {title} {description} {image} {frontmatter} {robots} />
-  <body>
+  <body class="flex flex-col justify-between h-screen w-screen">
     <Nav />
-    <main>
+    <main class="flex flex-col justify-start">
       <slot>Default Text</slot>
     </main>
     <Footer />

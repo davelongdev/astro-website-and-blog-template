@@ -22,7 +22,7 @@ const { page } = Astro.props;
 
 <MainLayout title="My Blog">
   <section>
-    <h1>New Blog Posts</h1>
+    <h1 class="text-center text-3xl py-3">New Blog Posts</h1>
     <div>
       {
         page.data.map((post) => (
@@ -36,8 +36,10 @@ const { page } = Astro.props;
     </div>
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>
-  <aside>
-    <h2>Blog Categories</h2>
-    <CategoryCloud showCount={true}/>
+  <aside class="flex justify-center">
+    <div class="flex justify-center flex-col">
+      <h2 class="text-xl block font-medium m-2 text-center" >Blog Categories</h2>
+      <CategoryCloud showCount={true}/>
+    </div>
   </aside>
 </MainLayout>

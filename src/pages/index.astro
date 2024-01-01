@@ -9,32 +9,32 @@ import { formatBlogPosts } from "../js/utils";
 
 const allPosts = await Astro.glob("./blog/*.md");
 const formattedPosts = formatBlogPosts(allPosts, {
-  limit: 3,
+  limit: 2, 
 });
 ---
 
-<MainLayout title="Home" description="My home page">
+<MainLayout title="My Web Site & Blog" description="A sample website made with Astro and styled with Tailwind CSS">
   <section>
-    <img
-      src="/images/silhouette.svg"
-      alt="My Headshot"
-      width={200}
-      height={330}
-    />
-    <div>
-      <h1>My Blog</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea cupiditate.
-      </p>
-      <Link
-        href="/about/"
-        style="secondary"
-        text="About Me"
+    <h1 class="text-center text-3xl py-3">My Website and Blog</h1>
+    <div class="flex justify-center pb-5">
+      <img
+        class="object-center"
+        src="/images/silhouette.svg"
+        alt="My Headshot"
+        width={200}
+        height={330}
       />
     </div>
+    <div>
+      <p class="text-xl px-10 pb-5">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea cupiditate. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae illo optio ea quibusdam, laboriosam consequuntur libero, a eum eligendi eius quasi in exercitationem neque quas officiis? Eveniet facere magnam labore voluptates natus voluptatibus eum delectus, at sit laboriosam nisi ut quas nesciunt nostrum. Ratione neque officiis aliquid, corporis nihil itaque tenetur provident. Quia veniam, dolores voluptatem reprehenderit aspernatur provident labore commodi assumenda, odit molestias aliquam amet quos omnis ipsum accusantium vitae.
+      </p>
+      <p class="text-xl px-10 pb-5"><a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href="/about/" text="Click here">Click here<a/> to learn more about me.</p>
+    </div>
   </section>
+  <hr />
   <section>
-    <h2>New Blog Posts</h2>
+    <h2 class="text-3xl py-3 m-3">New Blog Posts</h2>
     <div>
       {
         formattedPosts.map((post) => (
