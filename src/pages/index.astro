@@ -11,12 +11,15 @@ const allPosts = await Astro.glob("./blog/*.md");
 const formattedPosts = formatBlogPosts(allPosts, {
   limit: 2, 
 });
+
+// page variables
+const Title = "Website & Blog"
 ---
 
-<MainLayout title="Web Site & Blog" description="A sample website made with Astro and styled with Tailwind CSS">
+<MainLayout title={Title} description="A sample website made with Astro and styled with Tailwind CSS">
   <section>
-    <h1 class="text-center text-3xl py-3">Website and Blog</h1>
-    <div class="flex justify-center pb-5">
+    <h1 class="text-center text-3xl my-14">{Title}</h1>
+    <div class="flex justify-center mb-14">
       <img
         class="object-center"
         src="/images/silhouette.svg"
@@ -26,16 +29,16 @@ const formattedPosts = formatBlogPosts(allPosts, {
       />
     </div>
     <div>
-      <p class="text-xl px-10 pb-5">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea cupiditate. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae illo optio ea quibusdam, laboriosam consequuntur libero, a eum eligendi eius quasi in exercitationem neque quas officiis? Eveniet facere magnam labore voluptates natus voluptatibus eum delectus, at sit laboriosam nisi ut quas nesciunt nostrum. Ratione neque officiis aliquid, corporis nihil itaque tenetur provident. Quia veniam, dolores voluptatem reprehenderit aspernatur provident labore commodi assumenda, odit molestias aliquam amet quos omnis ipsum accusantium vitae.
+      <p class="text-xl px-10 mb-10 max-w-6xl mx-auto">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea cupiditate. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae illo optio ea quibusdam, laboriosam consequuntur libero, a eum eligendi eius quasi in exercitationem neque quas officiis? Eveniet facere magnam labore voluptates natus voluptatibus eum.
       </p>
-      <p class="text-xl px-10 pb-5"><a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href="/about/" text="Click here">Click here<a/> to learn more about me.</p>
+      <p class="text-xl px-10 mb-20 max-w-6xl mx-auto"><a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href="/about/" text="Click here">Click here<a/> to learn more about me.</p>
     </div>
   </section>
   <hr />
   <section>
-    <h2 class="text-3xl py-3 m-3 border-box">New Blog Posts</h2>
-    <div>
+    <h2 class="text-3xl py-3 m-3 border-box text-center">New Blog Posts</h2>
+    <div class="grid grid-cols-1 justify-items-center lg:grid-cols-2 max-w-6xl mx-auto">
       {
         formattedPosts.map((post) => (
           <PostCard
