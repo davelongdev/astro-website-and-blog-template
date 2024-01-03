@@ -1,15 +1,15 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
-title: Beginning with CSS
+title: The Title of Post Three
 date: 2022-12-03
-author: Darnell McClure
+author: Author Three
 image: {
   src: "/images/post-3.jpg",
-  alt: "A picture of a coder",
+  alt: "A picture of a desk",
 }
-description: CSS is a great way to style your website. In fact, there are no alternatives! Learn how to use it here.
+description: This is the description of the third blog post.
 draft: false
-category: CSS
+category: Tag Three
 ---
 
 Nisi duis ex aliqua eu officia eiusmod duis magna pariatur. Irure laborum qui aliqua nulla esse cillum laborum aliquip nulla elit. Id id Lorem duis irure cillum culpa. Nulla sint et aliqua velit do. Nulla sit sit proident consectetur enim ullamco aliqua in reprehenderit ullamco officia.

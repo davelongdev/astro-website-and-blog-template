@@ -1,15 +1,15 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
-title: Why is this CSS so weird?
+title: The Title of Post Four
 date: 2024-12-09
-author: Anna Dixon
+author: Author Two
 image: {
   src: "/images/post-4.jpg",
-  alt: "A picture of a coder",
+  alt: "A picture of a desk",
 }
-description: The global css file for this site is a bit different than I’d write things normally, but I’m trying to keep you from having to write a bunch of random classes.
+description: This is the description of the fourth blog post.
 draft: false
-category: CSS
+category: Tag Four
 ---
 
 Nisi duis ex aliqua eu officia eiusmod duis magna pariatur. Irure laborum qui aliqua nulla esse cillum laborum aliquip nulla elit. Id id Lorem duis irure cillum culpa. Nulla sint et aliqua velit do. Nulla sit sit proident consectetur enim ullamco aliqua in reprehenderit ullamco officia.

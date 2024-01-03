@@ -10,25 +10,25 @@ const { category, title, author, date, image } = Astro.props;
 
 <header>
   <div>
-    <div>
-      <a href={`/category/${slugify(category)}`}>{category}</a>
+    <div class="my-2 mx-3">
+      <a class="py-1.5 px-2 border rounded-md bg-slate-400" href={`/category/${slugify(category)}`}>{category}</a>
     </div>
-    <h1>{title}</h1>
-    <p>
+    <h1 class="text-lg font-medium m-3">{title}</h1>
+    <h2 class="text-lg m-3">
       by <a href={`/author/${slugify(author)}`}>{author}</a> • {
         formatDate(date)
       }
-    </p>
+    </h2>
   </div>
   <Image
     src={image.src}
     alt={image.alt}
-    width={1200}
-    height={600}
+    width={300}
+    height={150}
     format="avif"
     fit="cover"
     quality={80}
     aspectRatio="5:2"
-    class="hero-image"
+    class="m-3 rounded-md max-w-full"
   />
 </header>

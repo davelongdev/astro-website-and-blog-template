@@ -42,12 +42,12 @@ const relatedPosts = formattedPosts
     {author}
   />
   <div>
-    <div>
-      <slot />
+    <div class="prose-lg m-3">
+      <slot/>
     </div>
     <div>
-      <aside>
-        <h2>Blog Categories</h2>
+      <aside class="flex flex-col items-center">
+        <h2 class="m-3 text-lg font-medium text-center">Blog Categories</h2>
         <CategoryCloud />
       </aside>
       {
