@@ -31,14 +31,13 @@ const { posts, authorName } = Astro.props;
 
 <MainLayout title={authorName}>
   <section>
-    <h1>Posts by {authorName}</h1>
+    <h1 class="text-3xl font-medium text-center mt-8 mb-12">Posts by {authorName}</h1>
     <div>
       {
         posts.map((post) => (
           <PostCard
             frontmatter={post.frontmatter}
             url={post.url}
-            tagType="h2"
           />
         ))
       }

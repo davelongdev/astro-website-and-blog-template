@@ -52,8 +52,8 @@ const relatedPosts = formattedPosts
       </aside>
       {
         relatedPosts.length > 0 && (
-          <aside>
-            <h2>Related Posts</h2>
+          <aside class="flex flex-col items-center">
+            <h2 class="text-lg font-medium m-2">Related Posts</h2>
             <RelatedPosts {relatedPosts} />
           </aside>
         )

@@ -10,19 +10,19 @@ export async function getStaticPaths() {
   return [
     {
       params: { category: slugify("tag one") },
-      props: { name: "Reference Docs" },
+      props: { name: "Tag One" },
     },
     {
       params: { category: slugify("tag two") },
-      props: { name: "General" },
+      props: { name: "Tag Two" },
     },
     {
       params: { category: slugify("tag three") },
-      props: { name: "CSS" },
+      props: { name: "Tag Three" },
     },
     {
       params: { category: slugify("tag four") },
-      props: { name: "Astro" },
+      props: { name: "Tag Four" },
     },
   ];
 }
@@ -39,14 +39,13 @@ const catPosts = formattedPosts.filter(
 
 <MainLayout title={name}>
   <section>
-    <h1>Posts about {name}</h1>
+    <h1 class="text-3xl font-medium text-center mt-8 mb-12">Posts about {name}</h1>
     <div>
       {
         catPosts.map((post) => (
           <PostCard
             frontmatter={post.frontmatter}
             url={post.url}
-            tagType="h2"
           />
         ))
       }
