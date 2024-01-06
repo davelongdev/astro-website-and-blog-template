@@ -32,13 +32,19 @@ const Title = "Website & Blog"
       <p class="text-xl px-10 mb-10 max-w-3xl mx-auto">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea cupiditate. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae illo optio ea quibusdam, laboriosam consequuntur libero, a eum eligendi eius quasi in exercitationem neque quas officiis? Eveniet facere magnam labore voluptates natus voluptatibus eum.
       </p>
-      <p class="text-xl px-10 mb-20 max-w-6xl mx-auto"><a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href="/about/" text="Click here">Click here<a/> to learn more about me.</p>
+      <div class="my-10 text-center">
+        <a 
+          class="py-1.5 px-2 my-8 border rounded-md bg-slate-400 self-center" 
+          href="/about/"
+        >Learn More
+        <a/>
+      </div>
     </div>
   </section>
   <hr />
   <section>
-    <h2 class="text-3xl py-3 m-3 border-box text-center">New Blog Posts</h2>
-    <div class="grid grid-cols-1 lg:grid-cols-2 max-w-6xl mx-auto">
+    <h2 class="text-3xl py-3 my-5 border-box text-center">New Blog Posts</h2>
+    <div class="grid grid-cols-[1fr_35rem_1fr] lg:grid-cols-[1fr_25rem_25rem_1fr] lg:m-20 lg:gap-x-10 lg:[&>*:nth-child(odd)]:col-start-2 lg:[&>*:nth-child(even)]:col-start-3">
       {
         formattedPosts.map((post) => (
           <PostCard

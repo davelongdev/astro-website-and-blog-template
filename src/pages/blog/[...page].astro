@@ -23,7 +23,7 @@ const { page } = Astro.props;
 <MainLayout title="My Blog">
   <section>
     <h1 class="text-center text-3xl my-10">New Blog Posts</h1>
-    <div class="grid grid-cols-1 lg:grid-cols-2 max-w-6xl mx-auto">
+    <div class="grid grid-cols-[1fr_35rem_1fr] lg:grid-cols-[1fr_25rem_25rem_1fr] lg:m-20 lg:gap-x-10 lg:[&>*:nth-child(odd)]:col-start-2 lg:[&>*:nth-child(even)]:col-start-3">
       {
         page.data.map((post) => (
           <PostCard

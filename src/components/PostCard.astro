@@ -11,7 +11,7 @@ const { frontmatter, url, } = Astro.props;
 const { title, date, author, image, description, category } = frontmatter;
 ---
 
-<article class="border-2 rounded-md p-5 m-6 bg-slate-400">
+<article class="border-2 rounded-md py-5 px-5 my-6 bg-slate-400 flex flex-col text-center justify-items-center col-start-2 col-end-3">
   <a class="py-1.5 px-2 border rounded-md" href={`/category/${slugify(category)}`}>{category}</a>
   <a class="" href={url}>
     <Image

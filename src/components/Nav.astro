@@ -10,14 +10,14 @@ import navData from "../data/navData";
 ---
 
 <nav>
-  <div class="flex justify-between box-border max-w-screen-2xl m-auto p-3 items-center">
+  <div class="flex justify-between max-w-screen-2xl m-auto p-3 items-center">
     <a href="/">
       <Icon name="home" width="60" />
     </a>
     <ul>
       {
         navData.map((item) => (
-          <a class="underline text-xl text-blue-600 hover:text-blue-800 visited:text-purple-600 px-3" href={item.path}>{item.name}</a>
+          <a class="text-xl text-black hover:text-gray-500 px-3" href={item.path}>{item.name}</a>
         ))
       }
     </ul>
