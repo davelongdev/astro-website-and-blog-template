@@ -2,7 +2,7 @@
 
 // component imports
 import PostHeader from "../components/PostHeader.astro";
-import CategoryCloud from "../components/CategoryCloud.astro";
+import TagCloud from "../components/TagCloud.astro";
 import MainLayout from "./MainLayout.astro";
 import RelatedPosts from "../components/RelatedPosts.astro";
 
@@ -48,7 +48,7 @@ const relatedPosts = formattedPosts
     <div>
       <aside class="flex flex-col items-center">
         <h2 class="m-3 text-lg font-medium text-center">Blog Categories</h2>
-        <CategoryCloud />
+        <TagCloud />
       </aside>
       {
         relatedPosts.length > 0 && (

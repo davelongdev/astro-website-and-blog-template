@@ -9,7 +9,7 @@ image: {
 }
 description: This is the description of the sixth blog post.
 draft: false
-category: Tag Four
+tag: Tag Four
 ---
 
 Nisi duis ex aliqua eu officia eiusmod duis magna pariatur. Irure laborum qui aliqua nulla esse cillum laborum aliquip nulla elit. Id id Lorem duis irure cillum culpa. Nulla sint et aliqua velit do. Nulla sit sit proident consectetur enim ullamco aliqua in reprehenderit ullamco officia.
