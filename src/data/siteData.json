@@ -1,8 +1,8 @@
 {
-  "title": "My Astro Blog",
-  "description": "My musings about the Astro framework",
+  "title": "My Website & Blog",
+  "description": "Sample website & blog.  A basic template for many different kinds of sites.",
   "image": {
     "src": "/images/image-default.jpg",
-    "alt": "My Astro Blog"
+    "alt": "A desk with coffee"
   }
 }

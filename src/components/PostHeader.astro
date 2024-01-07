@@ -5,13 +5,13 @@ import { Image } from "@astrojs/image/components";
 // utils imports
 import { slugify, formatDate } from "../js/utils";
 
-const { category, title, author, date, image } = Astro.props;
+const { tag, title, author, date, image } = Astro.props;
 ---
 
 <header>
   <div class="flex flex-col items-center">
     <div class="my-2 mx-3">
-      <a class="py-1.5 px-2 border rounded-md bg-slate-400" href={`/category/${slugify(category)}`}>{category}</a>
+      <a class="py-1.5 px-2 border rounded-md bg-slate-400" href={`/category/${slugify(tag)}`}>{tag}</a>
     </div>
     <h1 class="text-lg font-medium m-3">{title}</h1>
     <h2 class="text-lg m-3">
