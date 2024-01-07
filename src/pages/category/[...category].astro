@@ -7,42 +7,34 @@ import PostCard from "../../components/PostCard.astro";
 import { slugify, formatBlogPosts } from "../../js/utils";
 
 export async function getStaticPaths() {
-  return [
-    {
-      params: { category: slugify("tag one") },
-      props: { name: "Tag One" },
-    },
-    {
-      params: { category: slugify("tag two") },
-      props: { name: "Tag Two" },
-    },
-    {
-      params: { category: slugify("tag three") },
-      props: { name: "Tag Three" },
-    },
-    {
-      params: { category: slugify("tag four") },
-      props: { name: "Tag Four" },
-    },
+  const allPosts = await Astro.glob("../blog/*.md");
+  const formattedPosts = formatBlogPosts(allPosts);
+  const allCategories = [
+    ...new Set(formattedPosts.map((post) => post.frontmatter.category).flat()),
   ];
+  return allCategories.map((category) => {
+    const categoryPosts = formattedPosts.filter((post) =>
+    post.frontmatter.category === category);
+    return {
+      params: { category: slugify(category) },
+      props: { 
+        categoryName: category,
+        posts: categoryPosts,
+      }
+    }
+  })
 }
 
-const { category } = Astro.params;
-const { name } = Astro.props;
+const { posts, categoryName } = Astro.props
 
-const allPosts = await Astro.glob("../blog/*.md");
-const formattedPosts = formatBlogPosts(allPosts);
-const catPosts = formattedPosts.filter(
-  (post) => slugify(post.frontmatter.category) === category
-);
 ---
 
-<MainLayout title={name}>
+<MainLayout title={categoryName}>
   <section>
-    <h1 class="text-3xl font-medium text-center mt-8 mb-12">Posts about {name}</h1>
+    <h1 class="text-3xl font-medium text-center mt-8 mb-12">Posts about {categoryName}</h1>
     <div class="grid grid-cols-[1fr_35rem_1fr] lg:grid-cols-[1fr_25rem_25rem_1fr] lg:m-20 lg:gap-x-10 lg:[&>*:nth-child(odd)]:col-start-2 lg:[&>*:nth-child(even)]:col-start-3">
       {
-        catPosts.map((post) => (
+        posts.map((post) => (
           <PostCard
             frontmatter={post.frontmatter}
             url={post.url}
