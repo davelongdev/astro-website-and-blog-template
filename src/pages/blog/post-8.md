@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
 title: The Title of Post Eight
-date: 2023-1-06
+date: 2023-8-02
 author: Author Six
 image: {
   src: "/images/post-6.jpg",

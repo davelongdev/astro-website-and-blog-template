@@ -1,14 +1,14 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
 title: The Title of Post Thirteen
-date: 2023-5-16
+date: 2020-0-01
 author: Author Five
 image: {
   src: "/images/post-6.jpg",
   alt: "A picture of a desk",
 }
 description: This is the description of the sixth blog post.
-draft: false
+draft: True
 category: Tag One
 ---
 
