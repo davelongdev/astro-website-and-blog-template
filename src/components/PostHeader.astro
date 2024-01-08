@@ -2,9 +2,12 @@
 // utils imports
 import { slugify, formatDate } from "../js/utils";
 import { Image } from "astro:assets";
-import silhouette from "../assets/silhouette.svg";
 
 const { tag, title, author, date, image } = Astro.props;
+const { src, alt } = image;
+
+const images = import.meta.glob<{ default: ImageMetadata }>('../assets/*.{jpeg,jpg,png,gif,svg}');
+if (!images[src]) throw new Error(`"${src}" does not exist in glob: "../assets/*.{jpeg,jpg,png,gif}"`);
 ---
 
 <header>
@@ -18,9 +21,9 @@ const { tag, title, author, date, image } = Astro.props;
         formatDate(date)
       }
     </h2>
-  <img
-    src={image.src}
-    alt={image.alt}
+  <Image
+    src={images[src]()}
+    alt={alt}
     width={300}
     height={150}
     class="m-3 rounded-md max-w-full"
