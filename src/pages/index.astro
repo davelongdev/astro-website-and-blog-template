@@ -2,7 +2,6 @@
 // component import
 import MainLayout from "../layouts/MainLayout.astro";
 import PostCard from "../components/PostCard.astro";
-import { Image } from "@astrojs/image/components";
 
 // utils imports
 import { formatBlogPosts } from "../js/utils";
@@ -20,7 +19,7 @@ const title = "Website & Blog"
   <section>
     <h1 class="text-center text-4xl my-14">{title}</h1>
     <div class="flex justify-center mb-14">
-      <Image
+      <img
         class="object-center rounded-md"
         src="/images/silhouette.svg"
         alt="My Headshot"

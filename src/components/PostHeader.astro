@@ -1,7 +1,4 @@
 ---
-// library imports
-import { Image } from "@astrojs/image/components";
-
 // utils imports
 import { slugify, formatDate } from "../js/utils";
 
@@ -19,15 +16,11 @@ const { tag, title, author, date, image } = Astro.props;
         formatDate(date)
       }
     </h2>
-  <Image
+  <img
     src={image.src}
     alt={image.alt}
     width={300}
     height={150}
-    format="avif"
-    fit="cover"
-    quality={80}
-    aspectRatio="5:2"
     class="m-3 rounded-md max-w-full"
   />
   </div>
