@@ -4,7 +4,7 @@ title: The Title of Post Fourteen
 date: 2029-1-01
 author: Author Seven
 image: {
-  src:"../assets/image-default.jpg", 
+  src: "../assets/image-default.jpg", 
   alt: "A picture of a desk",
 }
 description: This is the description of the sixth blog post.
