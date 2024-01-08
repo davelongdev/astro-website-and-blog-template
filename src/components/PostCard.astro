@@ -1,6 +1,7 @@
 ---
 // utils imports
 import { slugify, formatDate } from "../js/utils";
+import { Image } from "astro:assets";
 
 // props imports
 const { frontmatter, url, } = Astro.props;
@@ -10,7 +11,7 @@ const { title, date, author, image, description, tag } = frontmatter;
 <article class="border-2 rounded-md py-5 px-5 my-6 bg-slate-400 flex flex-col text-center justify-items-center col-start-2 col-end-3">
   <a class="py-1.5 px-2 border rounded-md" href={`/tags/${slugify(tag)}`}>{tag}</a>
   <a class="" href={url}>
-    <img
+    <Image
       class="my-4 rounded-md"
       src={image.src}
       alt={image.alt}
