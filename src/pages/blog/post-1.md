@@ -4,7 +4,7 @@ title: The Title of Post One
 date: 2022-10-29
 author: Author One
 image: {
-  src: "https://localhost:4321/images/image-default.jpg",
+  src: "../assets/image-default.jpg",
   alt: "A picture of a desk",
 }
 description: This is the description of the first blog post.

@@ -4,7 +4,7 @@ title: The Title of Post Four
 date: 2023-1-09
 author: Author Two
 image: {
-  src: "/images/post-4.jpg",
+  src: "../assets/image-default.jpg",
   alt: "A picture of a desk",
 }
 description: This is the description of the fourth blog post.

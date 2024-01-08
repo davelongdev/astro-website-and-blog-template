@@ -4,7 +4,7 @@ title: The Title of Post Eight
 date: 2023-8-02
 author: Author Six
 image: {
-  src: "/images/post-6.jpg",
+  src: "../assets/image-default.jpg",
   alt: "A picture of a desk",
 }
 description: This is the description of the sixth blog post.

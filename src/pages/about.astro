@@ -2,16 +2,18 @@
 // component import
 import MainLayout from "../layouts/MainLayout.astro";
 import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import silhouette from "../assets/silhouette.svg";
 ---
 
 <MainLayout title="About" description="About Page">
   <section>
     <div class="flex flex-col">
       <h1 class="text-center text-4xl my-10">About</h1>
-      <img
-        class="mx-auto mb-14 mb-10"
-        src="/images/silhouette.svg"
+      <Image
+        src={silhouette}
         alt="Headshot"
+        class="mx-auto mb-14 mb-10"
         width={200}
         height={330}
       />
