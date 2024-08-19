@@ -15,4 +15,4 @@ I have some additional updates that I need to add into the repository.  I'm plan
 
 ## Take a Look
 
-This project is live here - [live site](https://astro-blog-2.vercel.app).
+This project is live here - [live site](https://astro-website-and-blog-template.vercel.app/).
