@@ -1,4 +1,4 @@
-# Astro Website Blog Template
+# Astro Website & Blog Template
 
 ## Starting Point
 
